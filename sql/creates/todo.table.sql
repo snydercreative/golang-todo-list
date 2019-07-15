@@ -1,9 +1,9 @@
 CREATE TABLE todo (
     id SERIAL PRIMARY KEY,
-    listId INT REFRENCES list(id),
+    listId INT REFERENCES todoList(id),
     name VARCHAR(150),
     isComplete BIT,
     created TIMESTAMP,
     deleted TIMESTAMP,
-    order INT
+    sort INT
 )
