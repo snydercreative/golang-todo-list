@@ -1,0 +1,5 @@
+package teachingstrategiessample
+
+func main() {
+
+}
