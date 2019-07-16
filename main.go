@@ -1,5 +1,0 @@
-package teachingstrategiessample
-
-func main() {
-
-}

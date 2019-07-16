@@ -1,8 +1,8 @@
-package teachingstrategiessample
+package cmd
 
 import (
+	"golang-todo-list/app/handlers"
 	"net/http"
-	"teachingstrategies-sample/internal/handlers"
 
 	"github.com/gorilla/mux"
 )
@@ -24,7 +24,7 @@ Delete individual todo	DELETE  /v1/api/lists/{list id}/todos/{todoId}
 */
 
 // Routes - mappings for the endpoints
-func Routes() {
+func routes() {
 	router := mux.NewRouter()
 
 	subrouter := router.PathPrefix("/v1/api").Subrouter()
