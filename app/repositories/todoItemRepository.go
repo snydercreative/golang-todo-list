@@ -6,6 +6,6 @@ import "golang-todo-list/app/models"
 type TodoItemRepository struct{}
 
 // Get returns a specific todo item
-func (t *TodoItemRepository) Get(todoID int) *models.Todo {
-	return new(models.Todo)
+func (t *TodoItemRepository) Get(todoID int) (*models.Todo, error) {
+	return new(models.Todo), nil
 }
