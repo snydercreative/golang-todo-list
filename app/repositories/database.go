@@ -16,4 +16,8 @@ func Initialize(connectionString string) {
 	db, err = sql.Open("postgres", connectionString)
 
 	util.Check(err)
+
+	pingErr := db.Ping()
+
+	util.Check(pingErr)
 }
