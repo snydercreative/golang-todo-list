@@ -1,6 +1,6 @@
 DO $$
 DECLARE 
-    lastvalue BIGINT;
+    lastvalue INT;
 
 BEGIN
     TRUNCATE todolist CASCADE;

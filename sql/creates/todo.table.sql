@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS todo;
 
 CREATE TABLE todo (
     id SERIAL PRIMARY KEY,
-    listId BIGINT REFERENCES todoList(id),
+    listId INT REFERENCES todoList(id),
     name VARCHAR(150),
     isComplete BOOLEAN DEFAULT FALSE,
     created TIMESTAMP,
