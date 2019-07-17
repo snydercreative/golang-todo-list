@@ -1,6 +1,8 @@
 package models
 
-import "time"
+import (
+	"github.com/lib/pq"
+)
 
 // Todo is the model for a single todo item
 type Todo struct {
@@ -8,7 +10,7 @@ type Todo struct {
 	ListID     int
 	Name       string
 	IsComplete bool
-	Created    time.Time
-	Deleted    time.Time
+	Created    pq.NullTime
+	Deleted    pq.NullTime
 	Sort       int
 }
