@@ -4,11 +4,11 @@ import "time"
 
 // Todo is the model for a single todo item
 type Todo struct {
-	id         int
-	listID     int
-	name       string
-	isComplete bool
-	created    time.Time
-	deleted    time.Time
-	sort       int
+	ID         int
+	ListID     int
+	Name       string
+	IsComplete bool
+	Created    time.Time
+	Deleted    time.Time
+	Sort       int
 }
