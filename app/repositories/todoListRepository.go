@@ -3,7 +3,6 @@ package repositories
 import (
 	"golang-todo-list/app/models"
 	"golang-todo-list/app/util"
-	"time"
 
 	"github.com/lib/pq"
 )
@@ -26,7 +25,7 @@ func (t *TodoListRepository) Get(listID int) ([]*models.List, error) {
 		var (
 			id      int
 			name    string
-			created time.Time
+			created pq.NullTime
 			deleted pq.NullTime
 		)
 
