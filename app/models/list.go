@@ -1,11 +1,13 @@
 package models
 
-import "time"
+import (
+	"github.com/lib/pq"
+)
 
 // List is the model for a single list item
 type List struct {
 	ID      int
 	Name    string
-	Created time.Time
-	Deleted time.Time
+	Created pq.NullTime
+	Deleted pq.NullTime
 }
