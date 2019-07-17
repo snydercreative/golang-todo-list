@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"golang-todo-list/app/handlers"
+	"golang-todo-list/app/repositories"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -29,4 +30,6 @@ func main() {
 	subrouter.HandleFunc("/lists/{listId}/todos/{todoId}", todoItemHander.Delete).Methods("DELETE")
 
 	http.Handle("/", router)
+
+	repositories.Initialize("postgres://dbuser:sNChv71OhNvILU@localhost/teachingstrategies-sample")
 }
