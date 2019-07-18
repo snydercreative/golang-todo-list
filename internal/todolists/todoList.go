@@ -48,10 +48,10 @@ func GetTodoLists() ([]*TodoList, error) {
 }
 
 // GetTodoList returns a specific todo list
-func GetTodoList(ID int) ([]*TodoList, error) {
+func GetTodoList(listID int) ([]*TodoList, error) {
 	var lists []*TodoList
 
-	rows, err := util.Database.Query("SELECT id, name, created, deleted FROM todolist WHERE id = ?", ID)
+	rows, err := util.Database.Query("SELECT id, name, created, deleted FROM todolist WHERE id = $1", listID)
 
 	util.Check(err)
 
