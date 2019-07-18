@@ -14,17 +14,21 @@ func HandleRequests(w http.ResponseWriter, r *http.Request) {
 	var (
 		todolists []*TodoList
 		err       error
+		listID    int
 	)
 
 	vars := mux.Vars(r)
-	listID, err := strconv.Atoi(vars["listID"])
+
+	if vars["listID"] != "" {
+		listID, err = strconv.Atoi(vars["listID"])
+	}
 
 	util.Check(err)
 
 	switch r.Method {
 	case "GET":
 		if listID > 0 {
-			todolists, err = GetTodoList(int(listID))
+			todolists, err = GetTodoList(listID)
 		} else {
 			todolists, err = GetTodoLists()
 		}
