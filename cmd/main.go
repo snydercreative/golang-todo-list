@@ -16,7 +16,7 @@ func main() {
 	subrouter := router.PathPrefix("/v1/api").Subrouter()
 
 	subrouter.HandleFunc("/lists", todolists.HandleRequests).Methods("GET")
-	subrouter.HandleFunc("/lists/{listId}", todolists.HandleRequests).Methods("GET")
+	subrouter.HandleFunc("/lists/{listID}", todolists.HandleRequests).Methods("GET")
 
 	http.Handle("/", router)
 
