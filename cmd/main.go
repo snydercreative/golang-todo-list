@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	util.Initialize("postgres://dbuser:sNChv71OhNvILU@localhost/teachingstrategies-sample?sslmode=disable")
+	util.Initialize("postgres://dbuser:password@localhost/teachingstrategies-sample?sslmode=disable")
 
 	router := mux.NewRouter()
 
